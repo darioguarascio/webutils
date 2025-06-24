@@ -1,0 +1,8 @@
+version: '3.8'
+
+services:
+  webutils:
+    build: .
+    ports:
+      - ${SERVER_LISTEN:-3000}:3000
+    restart: unless-stopped
