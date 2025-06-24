@@ -3,6 +3,11 @@ version: '3.8'
 services:
   webutils:
     build: .
+    restart: unless-stopped
+    tty: true
     ports:
       - ${SERVER_LISTEN:-3000}:3000
-    restart: unless-stopped
+    logging:
+      options:
+        max-size: ${DOCKER_LOG_MAX_SIZE:-10m}
+        max-file: ${DOCKER_LOG_MAX_FILE:-3}
