@@ -1,12 +1,9 @@
 {
-  "name": "virail-chatbot",
+  "name": "webutils",
   "type": "module",
   "version": "0.0.0",
-  "description": "Virail Search via AI chat",
+  "description": "A set of web utilities to access via curl",
   "scripts": {
-    "test": "vitest --config ./vitest.config.ts",
-    "coverage": "vitest run --coverage ",
-    "test:cov": "vitest run --coverage.enabled --coverage.reporter=json-summary",
     "dev": "nodemon -e ts --exec \"npx tsx src/server.ts\""
   },
   "dependencies": {
