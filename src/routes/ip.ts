@@ -9,6 +9,7 @@ const handler = async function(req: Request, res: Response) {
     req.headers['cf-connecting-ip'] ??
     req.headers['x-forwarded-for'] ??
     req.ip
+    + "\n"
   );
 };
 
