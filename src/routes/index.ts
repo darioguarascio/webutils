@@ -14,8 +14,8 @@ const handler = async function(req: Request, res: Response) {
       const files = readdirSync(dir);
       
       for (const file of files) {
-        // Skip index.ts to avoid self-reference
-        if (file === 'index.ts' || file === 'index.js') {
+        // Skip index.ts to avoid self-reference; skip _prefixed files (disabled routes)
+        if (file === 'index.ts' || file === 'index.js' || file.startsWith('_')) {
           continue;
         }
         

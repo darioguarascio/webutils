@@ -5,6 +5,7 @@ import router from '@utils/router.ts'
 
 const app = express()
 
+app.use(express.json({ limit: '32kb' }))
 app.set('json spaces', 2)
 app.set('trust proxy', false);
 
